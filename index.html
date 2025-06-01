@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carlos Vaccari | Android Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="about.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f7fb;
+      color: #333;
+    }
+
+    .section-title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem; /* espaçamento entre linha e texto */
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #4b5563; /* cinza escuro */
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-title .line {
+        display: inline-block;
+        width: 40px;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #6c63ff, #3b82f6); /* gradiente azul/roxo */
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 2rem;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text .intro {
+      color: #6c63ff;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      margin: 0;
+    }
+
+    .hero-text .highlight {
+      color: #6c63ff;
+    }
+
+    .hero-text p.description {
+      margin: 1rem 0 2rem;
+      line-height: 1.6;
+      font-size: 1.5rem;
+    }
+
+    .chips {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .chip {
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #6c63ff;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 9999px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      border: 2px solid #6c63ff;
+      color: #6c63ff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .hero-image {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tech-section {
+        background: #ffffff;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 24px;
+        max-width: 1150px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        text-align: center;
+    }
+
+    .tech-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        scroll-snap-type: x mandatory;
+    }
+
+    .tech-chip {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #333;
+        color: #fff;
+        padding: 0.75rem 1rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        scroll-snap-align: start;
+    }
+
+    .tech-chip img {
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-container">
+          <div class="logo">Carlos Vaccari</div>
+          
+            <div class="nav-right">
+                <nav class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <a href="#contact" class="cta-button">Let's Talk</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+    <div class="hero-text">
+        <div class="section-title">
+            <span class="line"></span>
+            <span class="text">Welcome to my portfolio</span>
+        </div>
+      <h1>I am<br><span class="highlight">Mobile App Developer</span></h1>
+      <p class="description">
+        Senior Android developer specializing in building impactful, user-centered apps.
+        Focused on Kotlin, Jetpack Compose, Firebase, and scalable architecture. Co-creator of
+        <strong>GymBros</strong> and <strong>Fácil Bula</strong>.
+      </p>
+      <div class="chips">
+        <div class="chip">10+ Years Experience</div>
+        <div class="chip">1M+ Users Impacted</div>
+      </div>
+      <div class="buttons">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="imagens/img_profile.jpg" alt="Carlos Vaccari" />
+    </div>
+  </section>
+
+  <!-- Technologies -->
+  <section class="tech-section">
+    <h2>Technologies I Work With</h2>
+    <div class="tech-grid">
+      <div class="tech-chip" style="background:#F57C00;">Jetpack Compose</div>
+      <div class="tech-chip" style="background:#6A1B9A;">Kotlin</div>
+      <div class="tech-chip" style="background:#0288D1;">Firebase</div>
+      <div class="tech-chip" style="background:#2E7D32;">Room</div>
+      <div class="tech-chip" style="background:#546E7A;">MVVM</div>
+      <div class="tech-chip" style="background:#512DA8;">Hilt</div>
+      <div class="tech-chip" style="background:#455A64;">WorkManager</div>
+      <div class="tech-chip" style="background:#FF5722;">Glance</div>
+      <div class="tech-chip" style="background:#78909C;">Health Connect</div>
+      <div class="tech-chip" style="background:#607D8B;">Clean Architecture</div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <!-- Left -->
+      <div class="about-left">
+        <h2>About Me</h2>
+        <p>I’m a passionate Android Engineer with over 10 years of experience delivering robust, scalable, and user-focused mobile apps. My work spans companies in Brazil, the US, and Germany, where I’ve led architectural transitions, mentored developers, and helped shape modern Android codebases.</p>
+        <p>I specialize in Kotlin, Jetpack Compose, modular architecture, and Firebase—with a strong focus on clean code, testing strategies, and CI/CD. </p>
+        <p>I’m also the co-creator of side projects like <strong>GymBros</strong> (fitness gamification app) and <strong>Fácil Bula</strong> (AI-powered medical assistant), reaching thousands of users.</p>
+      </div>
+
+      <!-- Right -->
+      <div class="about-right">
+        <div class="about-box">
+            <h3>Professional Journey</h3>
+            <ul class="timeline">
+              <li>
+                <div class="timeline-content">
+                  <strong>Android Specialist</strong>
+                  <span>2023 – Present</span><br />
+                    Modularization and migration from WebView to native at Banco Carrefour.
+                </div>
+              </li>
+              <li>
+                <div class="timeline-content">
+                  <strong>Senior Android Dev</strong>
+                  <span>2022</span><br />
+                  Contributed to Route (EUA) with features like Maps, Billing and Analytics.
+                </div>
+              </li>
+              <li>
+                <div class="timeline-content">
+                  <strong>Android Specialist</strong>
+                  <span>2017 – 2022</span><br />
+                  Developed core features for the PagBank super app, including bank slip payment flows and integrations with card machines. Focused on internal tools and app health improvements to ensure performance and maintainability at scale.
+                </div>
+              </li>
+            </ul>
+          </div>
+        <!-- <div class="about-box">
+          <h3>Professional Journey</h3>
+          <ul>
+            <li><strong>Banco Carrefour</strong> <span>2023–Present</span><br />Led the transition from WebView to fully native Android app. Defined modular architecture for better scalability.</li>
+            <li><strong>Route, USA</strong> <span>2022</span><br />Contributed remotely to a large-scale logistics app, working on maps, subscriptions, and crash analytics.</li>
+            <li><strong>PagSeguro PagBank</strong> <span>2017–2022</span><br />Grew from engineer to specialist. Built internal tools, streamlined testing, led payments integration, and monitored app health across teams.</li>
+          </ul>
+        </div> -->
+        <!-- <div class="about-box">
+          <h3>Current Focus</h3>
+          <ul>
+            <li><strong>Performance Optimization</strong><br />Ensuring smooth, fast user experience on all devices.</li>
+            <li><strong>Security Implementation</strong><br />Using best practices for data privacy and secure APIs.</li>
+            <li><strong>Modern Technologies</strong><br />Exploring AI integration, new Jetpack libraries and Compose Multiplatform.</li>
+          </ul>
+        </div> -->
+      </div>
+    </div>
+  </section>
+</body>
+</html>
