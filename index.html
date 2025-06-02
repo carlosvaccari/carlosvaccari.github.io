@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="navbar.css" />
   <link rel="stylesheet" href="about.css" />
+  <link rel="stylesheet" href="projects.css" />
+  <link rel="stylesheet" href="contact.css" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -14,6 +16,24 @@
       padding: 0;
       background: #f5f7fb;
       color: #333;
+    }
+
+    .section-title-inline {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #4b5563;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    }
+
+    .section-title-inline .line {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #6c63ff, #3b82f6);
     }
 
     .section-title {
@@ -193,10 +213,10 @@
     <!-- Hero -->
     <section class="hero" id="home">
     <div class="hero-text">
-        <div class="section-title">
+        <div class="section-title-inline">
             <span class="line"></span>
             <span class="text">Welcome to my portfolio</span>
-        </div>
+          </div>
       <h1>I am<br><span class="highlight">Mobile App Developer</span></h1>
       <p class="description">
         Senior Android developer specializing in building impactful, user-centered apps.
@@ -273,24 +293,87 @@
               </li>
             </ul>
           </div>
-        <!-- <div class="about-box">
-          <h3>Professional Journey</h3>
-          <ul>
-            <li><strong>Banco Carrefour</strong> <span>2023–Present</span><br />Led the transition from WebView to fully native Android app. Defined modular architecture for better scalability.</li>
-            <li><strong>Route, USA</strong> <span>2022</span><br />Contributed remotely to a large-scale logistics app, working on maps, subscriptions, and crash analytics.</li>
-            <li><strong>PagSeguro PagBank</strong> <span>2017–2022</span><br />Grew from engineer to specialist. Built internal tools, streamlined testing, led payments integration, and monitored app health across teams.</li>
-          </ul>
-        </div> -->
-        <!-- <div class="about-box">
-          <h3>Current Focus</h3>
-          <ul>
-            <li><strong>Performance Optimization</strong><br />Ensuring smooth, fast user experience on all devices.</li>
-            <li><strong>Security Implementation</strong><br />Using best practices for data privacy and secure APIs.</li>
-            <li><strong>Modern Technologies</strong><br />Exploring AI integration, new Jetpack libraries and Compose Multiplatform.</li>
-          </ul>
-        </div> -->
       </div>
     </div>
   </section>
+
+  <section class="projects-section" id="projects">
+    <div class="section-title">
+      <h2>Featured Projects</h2>
+      <div class="underline"></div>
+      <p class="subtitle">Exploring innovative solutions through technology</p>
+    </div>
+    
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <h2>Fácil Bula</h2>
+            <img src="imagens/telas-facilbula.png" alt="Fácil Bula Screenshot" class="project-image">
+          
+            <div class="chips">
+                <div class="chip">AI</div>
+                <div class="chip">Gemini</div>
+                <div class="chip">Firebase</div>
+                <div class="chip">Health</div>
+            </div>
+          
+            <p class="project-description">
+              Fácil Bula is an AI-powered medical assistant that personalizes drug leaflets based on patient data.
+            </p>
+        </div>
+      </div>
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <div class="info">
+          <h3>Location</h3>
+          <p>Salvador, Brazil</p>
+        </div>
+      </div>
+  
+      <div class="contact-card">
+        <div class="icon">✉️</div>
+        <div class="info">
+          <h3>Email</h3>
+          <a href="mailto:carlos@email.com">carlosvaccari@gmail.com</a>
+        </div>
+      </div>
+  
+      <div class="contact-card">
+        <div class="icon">💼</div>
+        <div class="info">
+          <h3>LinkedIn</h3>
+          <a href="https://www.linkedin.com/in/carlos-vaccari" target="_blank">
+            linkedin.com/in/carlos-vaccari
+          </a>
+        </div>
+      </div>
+  </section>
+  
+  <!-- Adicione isso no final do body -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 </html>

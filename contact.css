@@ -1,0 +1,51 @@
+.contact-section {
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-card {
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    width: 280px;
+    gap: 1rem;
+    text-align: left;
+  }
+  
+  .icon {
+    font-size: 2rem;
+    background-color: #e0e7ff;
+    padding: 0.75rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .info p,
+  .info a {
+    margin: 0.3rem 0 0;
+    font-size: 0.95rem;
+    color: #374151;
+    text-decoration: none;
+  }
