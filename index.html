@@ -163,6 +163,7 @@
 
     .tech-grid {
         display: flex;
+        justify-content: center; /* ⬅️ isso centraliza os filhos */
         overflow-x: auto;
         gap: 1rem;
         padding-bottom: 1rem;
@@ -175,13 +176,14 @@
         align-items: center;
         gap: 0.5rem;
         background: #333;
-        color: #fff;
+        color: #000;
         padding: 0.75rem 1rem;
-        border-radius: 9999px;
+        border-radius: 12px;
         font-weight: 600;
         font-size: 0.95rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         scroll-snap-align: start;
+        border: 2px solid #6c63ff;
     }
 
     .tech-chip img {
@@ -241,16 +243,14 @@
   <section class="tech-section">
     <h2>Technologies I Work With</h2>
     <div class="tech-grid">
-      <div class="tech-chip" style="background:#F57C00;">Jetpack Compose</div>
-      <div class="tech-chip" style="background:#6A1B9A;">Kotlin</div>
-      <div class="tech-chip" style="background:#0288D1;">Firebase</div>
-      <div class="tech-chip" style="background:#2E7D32;">Room</div>
-      <div class="tech-chip" style="background:#546E7A;">MVVM</div>
-      <div class="tech-chip" style="background:#512DA8;">Hilt</div>
-      <div class="tech-chip" style="background:#455A64;">WorkManager</div>
-      <div class="tech-chip" style="background:#FF5722;">Glance</div>
-      <div class="tech-chip" style="background:#78909C;">Health Connect</div>
-      <div class="tech-chip" style="background:#607D8B;">Clean Architecture</div>
+      <div class="tech-chip" style="background:#fff;">Jetpack Compose</div>
+      <div class="tech-chip" style="background:#fff;">Kotlin</div>
+      <div class="tech-chip" style="background:#fff;">Firebase</div>
+      <div class="tech-chip" style="background:#fff;">Node.js</div>
+      <div class="tech-chip" style="background:#fff;">Python</div>
+      <div class="tech-chip" style="background:#fff;">Java</div>
+      <div class="tech-chip" style="background:#fff;">Health Connect</div>
+      <div class="tech-chip" style="background:#fff;">MongoDB</div>
     </div>
   </section>
 
